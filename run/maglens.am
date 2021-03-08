@@ -1,0 +1,36 @@
+### Magnetic Lens 
+### created by K.Nishida
+###
+
+&reg kprob=0                                ! superfish problem 
+icylin=1                               ! cylindrical coordinates 
+mode=0                                 ! magnetizm mode
+conv=0.1                               ! unit conversion ( e.g. cm => mm ) 
+dx=2.0                                 ! mesh size 
+xreg=500.0                               ! 
+yreg=-200.0,200.0                               ! 
+kreg=0.0,80.0                               ! 
+lreg=0.0,10.0,90.0                               ! 
+kmax=100.0                               ! 
+lmax=100.0                               ! 
+nbsup=0                              ! boundary :: upper  ( 0:Neumann, 1:Dirichlet )
+nbslo=0                              !          :: lower  
+nbsrt=0                              !          :: right  
+nbslf=1                              !          :: left   
+&
+
+$po x=0.0, y=-1000.0 $
+$po x=1000.0, y=-1000.0 $
+$po x=1000.0, y=1000.0 $
+$po x=0.0, y=1000.0 $
+$po x=0.0, y=-1000.0 $
+
+
+&reg mat=1, cur=-10.0&
+
+
+$po x=80.0, y=-30.0 $
+$po x=100.0, y=-30.0 $
+$po x=100.0, y=30.0 $
+$po x=80.0, y=30.0 $
+$po x=80.0, y=-30.0 $
